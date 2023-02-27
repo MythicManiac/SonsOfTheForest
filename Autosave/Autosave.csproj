@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <BepInExPluginGuid>dev.mythic.sotf.autosave</BepInExPluginGuid>
+        <Description>Performs an autosave over a configurable interval</Description>
+        <Version>0.1.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <PackageId>Autosave</PackageId>
+        <RootNamespace>Autosave</RootNamespace>
+        <AssemblyName>Autosave</AssemblyName>
+    </PropertyGroup>
+
+    <Import Project="Config.xml" />
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.667" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="IL2Cppmscorlib">
+            <HintPath>$(UnhollowedDllPath)\Il2Cppmscorlib.dll</HintPath>
+        </Reference>
+
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(UnhollowedDllPath)\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+
+        <Reference Include="Endnight">
+            <HintPath>$(UnhollowedDllPath)\Endnight.dll</HintPath>
+        </Reference>
+
+        <Reference Include="Sons.Save">
+            <HintPath>$(UnhollowedDllPath)\Sons.Save.dll</HintPath>
+        </Reference>
+
+        <Reference Include="Sons.Gameplay.GameSetup">
+            <HintPath>$(UnhollowedDllPath)\Sons.Gameplay.GameSetup.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>
