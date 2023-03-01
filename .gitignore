@@ -3,6 +3,7 @@
 project.lock.json
 .DS_Store
 *.pyc
+**/fmod_editor.log
 nupkg/
 
 # Visual Studio Code

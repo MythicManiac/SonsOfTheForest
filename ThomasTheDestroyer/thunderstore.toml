@@ -1,0 +1,31 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "Mythic"
+name = "SOTF_Thomas_the_Destroyer"
+versionNumber = "0.1.0"
+description = "Has a small chance of spawning a friend on a set interval. Single player only."
+websiteUrl = "https://github.com/MythicManiac/SonsOfTheForest"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack_IL2CPP = "6.0.667"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./ReleaseOutput"
+target = "/plugins"
+
+[[build.copy]]
+source = "./StreamingAssets"
+target = "/plugins/StreamingAssets"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["sons-of-the-forest"]
+categories = ["mods"]
